@@ -216,6 +216,82 @@
 
 
     //Lesson 10
+    // class StopWatch extends React.Component {
+    //   state = {lapse: 0, running: false}
+    //
+    //   handleRunClick = () => {
+    //     this.setState(state => {
+    //       if (state.running) {
+    //         clearInterval(this.timer)
+    //       } else {
+    //         const startTime = Date.now() - this.state.lapse;
+    //         this.timer = setInterval(() => {
+    //           this.setState({lapse: Date.now() - startTime
+    //           })
+    //         })
+    //       }
+    //       return {running: !state.running}
+    //     })
+    //   }
+    //
+    //   handleClearClick = () => {
+    //     clearInterval(this.timer)
+    //     this.setState({
+    //       running: false,
+    //       lapse: 0
+    //     })
+    //   }
+    //
+    //   componentWillUnmount() {
+    //     clearInterval(this.timer);
+    //   }
+    //
+    //   render() {
+    //     const {lapse, running} = this.state;
+    //     return (
+    //       <div>
+    //         <label>{lapse}ms</label>
+    //         <button onClick={() => this.handleRunClick()}>{running ? 'Stop' : 'Start'}</button>
+    //         <button onClick={() => this.handleClearClick()}>Clear</button>
+    //       </div>
+    //     )
+    //   }
+    // }
+    //
+    // class Counter extends React.Component {
+    //   state = {clickCount: 0}
+    //   increment = () => {
+    //     this.setState({
+    //       clickCount: this.state.clickCount + 1
+    //     })
+    //   };
+    //   render() {
+    //     const {clickCount} = this.state;
+    //     return (
+    //       <div>
+    //         <p>Times clicked: {clickCount}</p>
+    //         <button onClick={() => this.increment()}>/^\</button>
+    //       </div>
+    //
+    //     )
+    //   }
+    // }
+    //
+    // ReactDOM.render(
+    //   <StopWatch />,
+    //   document.getElementById('root')
+    // );
+
+    //Lesson 11 was quick - removing a memory leak from Lesson 10 using componentWillUnmount
+
+
+
+
+    // Lesson 12
+    
+
+
+
 
   </script>
 </div>
