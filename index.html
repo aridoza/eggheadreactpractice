@@ -1,0 +1,127 @@
+<div id='root'>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src='https://unpkg.com/@babel/standalone/babel.min.js'></script>
+  <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+  <script type="text/babel">
+    //const rootElement = document.getElementById('root');
+    // const element = document.createElement('div');
+    // element.textContent = 'Hello World';
+    // element.className = 'container';
+    // rootElement.appendChild(element);
+
+    //<!-- Now in React: -->
+
+    // const element = React.createElement('div', {className: 'container'}, 'Hello World', 'Goodbye World');
+    // console.log(element);
+    // ReactDOM.render(element, rootElement);
+
+    // Question:
+    // Using the raw React API (in JavaScript),
+    // how would you create a div React element
+    // with a class of 'container' that contains
+    // the text 'Hello World'?
+    // const newElement = React.createElement('div', {
+    //   className: 'container'
+    // }, 'Hello World');
+    // ReactDOM.render(newElement, rootElement);
+
+    //Lesson 3
+    //<!-- Now in JSX! -->
+    // const content = 'Hello World';
+    // const myClass = 'container';
+    // const props = {
+    //   container: 'container',
+    //   children: 'Hello World',
+    // }
+    //const element = <div {...props} />
+    // const user = { name: 'Peter' };
+    // const element = React.createElement('div', {
+    //   id: 'greeting',
+    //   className: 'active'
+    // }, 'Hello ', user.name);
+
+    // lesson 4
+    //prior to converting the message function to a Component
+    //{React.createElement(message, {msg: 'Goodbye World'})}
+    //beginning example: {message({msg: 'Goodbye World'})}
+
+    // const rootElement = document.getElementById('root');
+    // // now Message is a React component
+    // const Message = (props) => {
+    //   return <div>{props.children}</div>
+    // };
+    // const NewMessage = (props) => <div>{props.msg}</div>;
+    // const element = (
+    // <div className='container'>
+    //   <Message children='Hello World' />
+    //   <Message>Goodbye World</Message>
+    //   <NewMessage msg='Howdy'/>
+    // </div>
+    // )
+
+    //Lesson 5
+    // function SayHello(props) {
+    //   return (
+    //   <div>
+    //     Hello {props.firstName} {props.lastName}!
+    //   </div>
+    //   )
+    // };
+    //
+    // const PropTypes = {
+    //   string(props, propName, componentName) {
+    //     if (typeof props[propName] !== 'string') {
+    //       return new Error(`Hey, you should pass a string
+    //       for ${propName} in ${componentName} but you passed
+    //       a ${typeof props[propName]}!`
+    //       )
+    //     }
+    //   }
+    // }
+    //
+    // SayHello.propTypes = {
+    //   firstName: PropTypes.string.isRequired,
+    //   lastName: PropTypes.string.isRequired,
+    // }
+
+    // class SayHello extends React.Component {
+    //   static propTypes = {
+    //       firstName: PropTypes.string.isRequired,
+    //       lastName: PropTypes.string.isRequired
+    //   }
+    //   render() {
+    //       const {firstName, lastName} = this.props;
+    //       return (
+    //           <div>Hello {firstName} {lastName}!</div>
+    //       )
+    //   }
+    // }
+
+    // ReactDOM.render(
+    // <SayHello firstName={true}/>,
+    // document.getElementById('root'));
+
+    //Lesson 6
+    // const Message = ({message}) => {
+    //   return message ? React.createElement('div', null, message)
+    //     : React.createElement('div', null, 'No Message')
+    //   }
+
+    function Message({message}) {
+      return (
+      <div>
+        { message ? <div>{message}</div>
+          : <div>No Message</div>
+        }
+      </div>
+      )
+    }
+
+    ReactDOM.render(
+    <Message message={null}/>,
+    document.getElementById('root')
+    )
+
+  </script>
+</div>
